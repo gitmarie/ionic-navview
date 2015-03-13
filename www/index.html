@@ -39,6 +39,8 @@
       
   </head>
   <body ng-app="ionic-navview">
+      
+      
     <ion-nav-view>
     </ion-nav-view>
           
@@ -46,7 +48,10 @@
       <ion-view view-title="Home">
         <ion-content>
           <h2>I am state 1!</h2>
-          <a href="#/state2">Go to state 2.</a>
+          <button class="button button-full button-energized" ui-sref="state2">
+            Go to state 2
+          </button>
+          <!-- <a href="#/state2">Go to state 2</a> -->
         </ion-content>
       </ion-view>
     </script>
@@ -55,7 +60,10 @@
       <ion-view view-title="Two">
         <ion-content>
           <h2>I am state 2!</h2>
-          <a href="#/state3">Go to state 3.</a>
+          <button class="button button-full button-assertive" ui-sref="state3">
+            Go to state 3
+          </button>
+          <!-- <a href="#/state3">Go to state 3.</a> -->
         </ion-content>
       </ion-view>
     </script>
@@ -64,6 +72,7 @@
       <ion-view view-title="Three">
         <ion-content>
           <h2>I am state 3!</h2>
+          <p>Sin é!</p>
         </ion-content>
       </ion-view>
     </script>
