@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
     <title></title>
@@ -10,72 +11,77 @@
     <script src="cordova.js"></script>
 
     <script type="text/javascript">
-      angular.module('ionic-navview', ['ionic'])
+        angular.module('ionic-navview', ['ionic'])
 
-      .config(function($stateProvider, $urlRouterProvider) {
+        .config(function ($stateProvider, $urlRouterProvider) {
 
-        
-        $urlRouterProvider.otherwise('/');
-        
-        $stateProvider
 
-        .state('state1', {
-          url: '/',
-          templateUrl: 'state1.html'
+            $urlRouterProvider.otherwise('/');
+
+            $stateProvider
+
+                .state('state1', {
+                url: '/',
+                templateUrl: 'state1.html'
+            })
+
+            .state('state2', {
+                url: '/state2',
+                templateUrl: 'state2.html'
+            })
+
+            .state('state3', {
+                url: '/state3',
+                templateUrl: 'state3.html'
+            });
+
         })
-
-        .state('state2', {
-          url: '/state2',
-          templateUrl: 'state2.html'
-        })
-        
-        .state('state3', {
-          url: '/state3',
-          templateUrl: 'state3.html'
-        });
-
-      })
     </script>
-      
-  </head>
-  <body ng-app="ionic-navview">
-      
-      
+
+</head>
+
+<body ng-app="ionic-navview">
+    <ion-nav-bar class="bar-stable">
+        <ion-nav-back-button>
+        </ion-nav-back-button>
+    </ion-nav-bar>
+
     <ion-nav-view>
     </ion-nav-view>
-          
+
     <script type="text/ng-template" id="state1.html">
-      <ion-view view-title="Home">
-        <ion-content>
-          <h2>I am state 1!</h2>
-          <button class="button button-full button-energized" ui-sref="state2">
-            Go to state 2
-          </button>
-          <!-- <a href="#/state2">Go to state 2</a> -->
-        </ion-content>
-      </ion-view>
+        <ion-view view-title="Home">
+            <ion-content>
+                <h2>I am state 1!</h2>
+                <button class="button button-full button-energized" ui-sref="state2">
+                    Go to state 2
+                </button>
+                <!-- <a href="#/state2">Go to state 2</a> -->
+            </ion-content>
+        </ion-view>
     </script>
-    
+
     <script type="text/ng-template" id="state2.html">
-      <ion-view view-title="Two">
-        <ion-content>
-          <h2>I am state 2!</h2>
-          <button class="button button-full button-assertive" ui-sref="state3">
-            Go to state 3
-          </button>
-          <!-- <a href="#/state3">Go to state 3.</a> -->
-        </ion-content>
-      </ion-view>
+        <ion-view view-title="Two">
+            <ion-content>
+                <h2>I am state 2!</h2>
+                <button class="button button-full button-assertive" ui-sref="state3">
+                    Go to state 3
+                </button>
+                <!-- <a href="#/state3">Go to state 3.</a> -->
+            </ion-content>
+        </ion-view>
     </script>
-      
+
     <script type="text/ng-template" id="state3.html">
-      <ion-view view-title="Three">
-        <ion-content>
-          <h2>I am state 3!</h2>
-          <p>Sin é!</p>
-        </ion-content>
-      </ion-view>
+        <ion-view view-title="Three">
+            <ion-content>
+                <h2>I am state 3!</h2>
+                <p>Sin é!</p>
+            </ion-content>
+        </ion-view>
     </script>
-      
-  </body>
+
+</body>
+
 </html>
