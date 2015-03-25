@@ -9,17 +9,17 @@ angular.module('ionic-navview', ['ionic'])
 
             .state('state1', {
                 url: '/',
-                templateUrl: 'state1.html'
+                templateUrl: 'templates/state1.html'
             })
 
             .state('state2', {
                 url: '/state2',
-                templateUrl: 'state2.html'
+                templateUrl: 'templates/state2.html'
             })
 
             .state('state3', {
                 url: '/state3',
-                templateUrl: 'state3.html'
+                templateUrl: 'templates/state3.html'
             });
 
         })
